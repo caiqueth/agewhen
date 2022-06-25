@@ -1,14 +1,15 @@
 import sys
+from urllib.parse import quote
+
+from dateutil.relativedelta import relativedelta
 
 from apis.omdb import get_movie_release_date
 from apis.wikidata import get_person_birthday
 
-from dateutil.relativedelta import relativedelta
-
 if __name__ == "__main__":
     person_name, movie_title = sys.argv[1], sys.argv[2]
-    person_birthday = get_person_birthday(person_name)
-    movie_release_date = get_movie_release_date(movie_title)
+    person_birthday = get_person_birthday(quote(person_name))
+    movie_release_date = get_movie_release_date(quote(movie_title))
     person_age = relativedelta(movie_release_date, person_birthday).years
 
     response = f"""
