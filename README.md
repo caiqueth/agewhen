@@ -1,8 +1,8 @@
 # Introduction
 
 Python script to retrieve informations from Wikipedia and OMDB (Open Movie Database).
-It makes requests in both APIs to get the birthday from someone and a movie release date, by that movie's title.
-With those infos, it calculates that person's age by the time the movie was released.
+It makes requests in both APIs to get someone's birthday and a movie's release date, by its title.
+It then calculates the person's age by the time the movie was released.
 
 I only made this to mess around with both APIs.
 
